@@ -1,0 +1,32 @@
+
+
+# Then, we're going to get you the latest Ruby
+; rvm get stable
+; rvm use ruby --latest --install --default
+
+# Next, install bundler, which manages dependencies like RSpec
+; gem install bundler
+
+# Create a bundler project
+; bundle init
+
+# And add RSpec to your dependencies
+; bundle add rspec
+
+# Generate an RSpec template
+; rspec --init
+
+# add this line to Gemfile
+gem 'simplecov', require: false, group: :test
+then run 'bundle install' in terminal
+
+# added these lines to the very top of spec_helper.rb
+require 'simplecov'
+require 'simplecov-console'
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+  SimpleCov::Formatter::Console
+  # Want a nice code coverage website? Uncomment this next line!
+  # SimpleCov::Formatter::HTMLFormatter
+])
+SimpleCov.start
