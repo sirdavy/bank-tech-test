@@ -15,19 +15,15 @@ RSpec.describe BankAccount do
     expect(my_account.get_transactions_with_balance.length).to eq(1)
   end
 
+  it "returns an array containing two transactions" do
+    my_account = BankAccount.new
+    my_account.deposit(1000.00)
+    my_account.withdraw(1000.00)
+    expect(my_account.get_transactions_with_balance.length).to eq(2)
+  end
+
 end
 
-
-
-
-# my_account = BankAccount.new
-# my_account.deposit(1000.00)
-# expect(my_account.get_transactions.length).to eq(1)
-
-# my_account = BankAccount.new
-# my_account.deposit(1000.00)
-# my_account.withdraw(1000.00)
-# expect(my_account.get_transactions.length).to eq(2)
 
 # my_account = BankAccount.new
 # my_account.deposit(300)
