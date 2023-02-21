@@ -2,7 +2,6 @@ require "bank_account"
 require "transaction"
 
 RSpec.describe BankAccount do
-  
   it "returns an array containing one deposit transaction" do
     my_account = BankAccount.new
     my_account.deposit(1000.00)
@@ -43,7 +42,6 @@ RSpec.describe BankAccount do
     expect(result[0][:debit]).to eq (700.00)
   end
 
-
   it "prints the correct statement to the console" do
     my_account = BankAccount.new
     my_account.deposit(1000)
@@ -53,6 +51,4 @@ RSpec.describe BankAccount do
                       "21/02/2023 || 1000.00 ||  || 1000.00\n"
     expect { my_account.print_statement }.to output(expected_output).to_stdout
   end
-
 end
-

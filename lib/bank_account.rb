@@ -23,7 +23,7 @@ class BankAccount
           date: transaction.date,
           credit: transaction.credit,
           debit: 0,
-          balance: balance
+          balance: balance,
         }
       else
         balance -= transaction.debit
@@ -31,7 +31,7 @@ class BankAccount
           date: transaction.date,
           credit: 0,
           debit: transaction.debit,
-          balance: balance
+          balance: balance,
         }
       end
     end
@@ -47,7 +47,4 @@ class BankAccount
       puts "#{transaction[:date]} || #{credit} || #{debit} || #{"%.2f" % transaction[:balance]}"
     end
   end
-
-
-  
 end
