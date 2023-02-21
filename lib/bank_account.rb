@@ -47,4 +47,7 @@ class BankAccount
       puts "#{transaction[:date]} || #{credit} || #{debit} || #{"%.2f" % transaction[:balance]}"
     end
   end
+
+
+  
 end
