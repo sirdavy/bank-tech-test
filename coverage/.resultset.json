@@ -1,0 +1,40 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/davidscott/Projects/bank_tech_test/spec/bank_account_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/davidscott/Projects/bank_tech_test/lib/bank_account.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/davidscott/Projects/bank_tech_test/spec/transaction_spec.rb": {
+        "lines": [
+
+        ]
+      }
+    },
+    "timestamp": 1676976625
+  }
+}
