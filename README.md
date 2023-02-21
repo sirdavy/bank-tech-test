@@ -35,7 +35,7 @@ date || credit || debit || balance
 ## Approach to Structure ##
 * Test could have been fulfilled with a single class but settled on a two class system for futureproofing.
 * Transaction Class (deals with date, credit, debit) 
-* BankAccount Class (deals with functions of deposit, withraw, getting all transactions with balance, and printing statements)
+* BankAccount Class (deals with functions of deposit, withdraw, getting all transactions with balance, and printing statements)
 * For security reasons I thought it was a good idea *not* to have a instance variable containing the balance 
 
 
