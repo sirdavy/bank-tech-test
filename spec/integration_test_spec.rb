@@ -30,15 +30,19 @@ RSpec.describe BankAccount do
     expect(result[0][:balance]).to eq (300.00)
   end
 
+  it "returns the correct credit amount" do
+    my_account = BankAccount.new
+    my_account.deposit(400.00)
+    result = my_account.get_transactions_with_balance
+    expect(result[0][:credit]).to eq (400.00)
+  end
+
 end
 
 
 
 
-# my_account = BankAccount.new
-# my_account.deposit(400.00)
-# result = my_account.get_transactions
-# expect(result[0].credit).to eq (400.00)
+
 
 # my_account = BankAccount.new
 # my_account.withdraw(700.00)
