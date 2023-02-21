@@ -22,13 +22,18 @@ RSpec.describe BankAccount do
     expect(my_account.get_transactions_with_balance.length).to eq(2)
   end
 
+  it "returns the correct balance" do
+    my_account = BankAccount.new
+    my_account.deposit(300)
+    puts my_account.get_transactions_with_balance
+    result = my_account.get_transactions_with_balance
+    expect(result[0][:balance]).to eq (300.00)
+  end
+
 end
 
 
-# my_account = BankAccount.new
-# my_account.deposit(300)
-# result = my_account.gets_transactions_with_balance
-# expect(result[0][:balance])to eq (300.00)
+
 
 # my_account = BankAccount.new
 # my_account.deposit(400.00)
