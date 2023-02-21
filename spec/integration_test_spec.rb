@@ -57,7 +57,3 @@ RSpec.describe BankAccount do
 
 end
 
-
-# my_account = BankAccount.new
-# my_account.deposit(400.00)
-# expect(my_account.print_statement).to include("400.00") #not sure if this will work

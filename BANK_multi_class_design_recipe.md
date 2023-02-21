@@ -63,9 +63,6 @@ uses asciiflow.com but you could also use excalidraw.com, draw.io, or miro.com_
 └─────────────────────────┘
 ```
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
-
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
 
 
 
@@ -118,10 +115,7 @@ combinations that reflect the ways in which the system will be used._
 
 ####  integration tests
 
-
-
 # returns no transactions when there have been no deposits or withdrawals
-
 
 my_account = BankAccount.new
 my_account.deposit(1000.00)
@@ -150,12 +144,6 @@ expect(result[0].credit).to eq (700.00)
 my_account = BankAccount.new
 my_account.deposit(400.00)
 expect(my_account.print_statement).to include("400.00") #not sure if this will work
-
-
-
-
-
-
 
 
 
