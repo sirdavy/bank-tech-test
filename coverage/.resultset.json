@@ -7,8 +7,8 @@
           null,
           1,
           1,
-          1,
-          1,
+          0,
+          0,
           null,
           null,
           null
@@ -19,12 +19,26 @@
           1,
           null,
           1,
-          1,
+          0,
           null,
           null,
           1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/davidscott/Projects/bank_tech_test/spec/integration_test_spec.rb": {
+        "lines": [
+          1,
           1,
           null,
+          0,
+          0,
+          0,
+          0,
+          0,
           null,
           null
         ]
@@ -35,6 +49,38 @@
         ]
       }
     },
-    "timestamp": 1676976625
+    "timestamp": 1676977153
+  },
+  "Unit Tests": {
+    "coverage": {
+      "/Users/davidscott/Projects/bank_tech_test/spec/transaction_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/davidscott/Projects/bank_tech_test/lib/transaction.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1676977422
   }
 }
