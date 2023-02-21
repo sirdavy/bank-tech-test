@@ -37,6 +37,13 @@ RSpec.describe BankAccount do
     expect(result[0][:credit]).to eq (400.00)
   end
 
+  it "returns the correct debit amount" do
+    my_account = BankAccount.new
+    my_account.withdraw(700.00)
+    result = my_account.get_transactions_with_balance
+    expect(result[0][:debit]).to eq (700.00)
+  end
+
 end
 
 
