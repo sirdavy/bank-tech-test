@@ -1,5 +1,4 @@
 class BankAccount
-
   def initialize
     @transactions = []
   end
@@ -20,13 +19,69 @@ class BankAccount
     @transactions.each do |transaction|
       if transaction.credit > 0
         balance += transaction.credit
-        transactions_with_balance << {date: transaction.date, credit: transaction.credit, debit: 0, balance: balance}      
-        else
-          balance -= transaction.debit
-          transactions_with_balance << {date: transaction.date, credit: 0, debit: transaction.debit, balance: balance}
+        transactions_with_balance << {
+          date: transaction.date,
+          credit: transaction.credit,
+          debit: 0,
+          balance: balance
+        }
+      else
+        balance -= transaction.debit
+        transactions_with_balance << {
+          date: transaction.date,
+          credit: 0,
+          debit: transaction.debit,
+          balance: balance
+        }
       end
     end
     transactions_with_balance
   end
+
+  # def print_statement
+  #   puts "Date || Credit || Debit || Balance"
+  #   transactions_with_balance = get_transactions_with_balance.reverse
+  #   transactions_with_balance.each do |transaction|
+  #     puts "#{transaction[:date]} || #{'%.2f' % transaction[:credit]} || #{'%.2f' % transaction[:debit]} || #{'%.2f' % transaction[:balance]}"
+  #   end
+  # end
+
+  # def print_statement
+  #   puts "Date || Credit || Debit || Balance"
+  #   transactions_with_balance = get_transactions_with_balance.reverse
+  #   transactions_with_balance.each do |transaction|
+  #     credit = unless transaction[:credit]
+  #               ''
+  #             else
+  #               "%.2f" % transaction[:credit]
+  #             end
+  
+  #     debit = unless transaction[:debit]
+  #               ''
+  #             else
+  #               "%.2f" % transaction[:debit]
+  #             end
+  
+  #     balance = "%.2f" % transaction[:balance]
+  #     puts "#{transaction[:date]} || #{credit} || #{debit} || #{balance}"
+  #   end
+  # end
+
+  def print_statement
+    puts "Date || Credit || Debit || Balance"
+    transactions_with_balance = get_transactions_with_balance.reverse
+    transactions_with_balance.each do |transaction|
+      credit = transaction[:credit] == 0 ? "" : "%.2f" % transaction[:credit]
+      debit = transaction[:debit] == 0 ? "" : "%.2f" % transaction[:debit]
+      # balance = "%.2f" % transaction[:balance]
+      # puts "#{transaction[:date]} || #{'%.2f' % transaction[:credit]} || #{'%.2f' % transaction[:debit]} || #{'%.2f' % transaction[:balance]}"
+      puts "#{transaction[:date]} || #{credit} || #{debit} || #{'%.2f' % transaction[:balance]}"
+
+    end
+  end
+  
+
+
+
 
 end
