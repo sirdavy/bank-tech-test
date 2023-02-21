@@ -9,6 +9,11 @@ class BankAccount
     @transactions << transaction
   end
 
+  def withdraw(amount)
+    transaction = Transaction.new(Time.now.strftime("%d/%m/%Y"), amount, 0)
+    @transactions << transaction
+  end
+
   def get_transactions_with_balance
     return @transactions
   end
