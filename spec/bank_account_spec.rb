@@ -7,21 +7,6 @@ RSpec.describe BankAccount do
     expect(my_account.get_transactions_with_balance).to eq([])
   end
 
-
-  # it "tests get_transactions_with_balance in isolation" do 
-  #   my_account = BankAccount.new
-  #   transactions = [
-
-  #         ]
-  #   my_account.instance_variable_set(:@transactions, transactions)
-      
-  #   expect(my_account.get_transactions_with_balance).to eq([
-  #       {date: "22/03/2023", credit: 100, debit: 0, balance: 100},
-  #       {date: "23/03/2023", credit: 0, debit: 50, balance: 50},
-  #       {date: "24/03/2023", credit: 200, debit: 0, balance: 250}
-  #     ])
-  # end
-
 end
 
 describe BankAccount do
@@ -46,22 +31,8 @@ describe BankAccount do
     expected_output = "Date || Credit || Debit || Balance\n24/03/2023 || 200.00 ||  || 250.00\n23/03/2023 ||  || 50.00 || 50.00\n22/03/2023 || 100.00 ||  || 100.00\n"
     expect { my_account.print_statement }.to output(expected_output).to_stdout
   end
-
-
+  
 end
 
 
 
-
-
-
-
-# ########## tests print_statement in isolation ###########
-# my_account = BankAccount.new
-# transactions = [
-#         instance_double(Transaction, date: Time.now.strftime("22/03/2023"), credit: 100, debit: 0),
-#         instance_double(Transaction, date: Time.now.strftime("23/03/2023"), credit: 0, debit: 50),
-#         instance_double(Transaction, date: Time.now.strftime("24/03/2023"), credit: 200, debit: 0)
-#       ]
-# my_account.instance_variable_set(:@transactions, transactions)
-# expect(my_account.print_statement.lines[1..-1].join).to eq("24/03/2023 || 200.00 ||  || 200.00, 23/03/2023 ||   || 50.00 || 150.00, 22/03/2023 || 100.00 ||  || 250.00")

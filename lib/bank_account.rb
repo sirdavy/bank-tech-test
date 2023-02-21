@@ -38,19 +38,13 @@ class BankAccount
     transactions_with_balance
   end
 
-
   def print_statement
-    puts "Date || Credit || Debit || Balance"
     transactions_with_balance = get_transactions_with_balance.reverse
+    puts "Date || Credit || Debit || Balance"
     transactions_with_balance.each do |transaction|
       credit = transaction[:credit] == 0 ? "" : "%.2f" % transaction[:credit]
       debit = transaction[:debit] == 0 ? "" : "%.2f" % transaction[:debit]
-      puts "#{transaction[:date]} || #{credit} || #{debit} || #{'%.2f' % transaction[:balance]}"
+      puts "#{transaction[:date]} || #{credit} || #{debit} || #{"%.2f" % transaction[:balance]}"
     end
   end
-  
-
-
-
-
 end
