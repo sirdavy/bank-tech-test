@@ -69,9 +69,11 @@ BankAccount.withdraw(amount)
 ```
 The statement is printed, ommitting spaces for credit or debits if they are not present (as required in the test specification).
 ```
-BankAccount.printStatement
+BankAccount.print_statement
 ```
+![alt text](https://github.com/sirdavy/bank-tech-test/bank_test_working.png?raw=true)
 
-#Testing#
+# Testing #
 Testing was carried out using rspec and SimpleCov. 
 All tests pass with a 100% coverage.
+![alt text](https://github.com/sirdavy/bank-tech-test/bank_test_tests.png?raw=true)
