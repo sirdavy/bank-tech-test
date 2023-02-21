@@ -29,7 +29,7 @@ date || credit || debit || balance
 * Built user stories out from the test specifications as if they were a client brief
 * Flagged up nouns and verbs in order to identify Classes, Methods and Variables
 * A long session of spitball-diagramming; open-minded, nothing set in stone.
-![alt text](https://github.com/sirdavy/bank-tech-test/bank_test_diagram.png?raw=true)
+![Diagramming](https://github.com/sirdavy/bank-tech-test/blob/main/bank_test_diagram.png)
 * Classes and functions outlined in template along with test examples.
 
 ## Approach to Structure ##
@@ -71,9 +71,9 @@ The statement is printed, ommitting spaces for credit or debits if they are not 
 ```
 BankAccount.print_statement
 ```
-![alt text](https://github.com/sirdavy/bank-tech-test/bank_test_working.png?raw=true)
+![Screenshot of program](https://github.com/sirdavy/bank-tech-test/blob/main/bank_test_working.png)
 
 # Testing #
 Testing was carried out using rspec and SimpleCov. 
 All tests pass with a 100% coverage.
-![alt text](https://github.com/sirdavy/bank-tech-test/bank_test_tests.png?raw=true)
+![Test results](https://github.com/sirdavy/bank-tech-test/blob/main/bank_test_tests.png)
